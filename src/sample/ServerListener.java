@@ -15,14 +15,14 @@ import java.net.Socket;
 
 public class ServerListener implements Runnable {
 
-    private static TableView<Coordinate> tableView;
+    private static TableView<Coordinates> tableView;
     private static Group group;
     private static TextArea textArea;
 
     private boolean stopRequested = false;
 
 
-    public ServerListener(TableView<Coordinate> tableView, Group group, TextArea textArea) {
+    public ServerListener(TableView<Coordinates> tableView, Group group, TextArea textArea) {
         ServerListener.tableView = tableView;
         ServerListener.group = group;
         ServerListener.textArea = textArea;
@@ -79,7 +79,7 @@ public class ServerListener implements Runnable {
                             textArea.setText("Received body:" + json);
                             if (json.isNull("message")) {
                                 group.getChildren().add(new Circle(json.getInt(Constants.getCoordinateClassPropertyXName()), json.getInt(Constants.getCoordinateClassPropertyYName()), Constants.getTargetSpotRadius(), Constants.getTargetSpotColor()));
-                                tableView.getItems().add(new Coordinate(json.getInt(Constants.getCoordinateClassPropertyXName()), json.getInt(Constants.getCoordinateClassPropertyYName())));
+                                tableView.getItems().add(new Coordinates(json.getInt(Constants.getCoordinateClassPropertyXName()), json.getInt(Constants.getCoordinateClassPropertyYName())));
                             }
                         });
                     } catch (JSONException e) {

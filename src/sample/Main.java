@@ -19,7 +19,7 @@ public class Main extends Application {
 
         ImageView imageView = new ImageView();
         VBox buttonBox = new VBox();
-        TableView<Coordinate> tableView = new TableView<>();
+        TableView<Coordinates> tableView = new TableView<>();
         BorderPane borderPane = new BorderPane();
         Group group = new Group(imageView);
         TextArea textArea = new TextArea();

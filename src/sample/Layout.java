@@ -18,13 +18,13 @@ import java.io.FileNotFoundException;
 
 public class Layout {
 
-    private final TableView<Coordinate> tableView;
+    private final TableView<Coordinates> tableView;
     private final Group group;
     private final ImageView imageView;
     private final VBox vbox;
     private final TextArea textArea;
 
-    public Layout(TableView<Coordinate> tableView, Group group, ImageView imageView, VBox vbox, TextArea textArea) throws FileNotFoundException {
+    public Layout(TableView<Coordinates> tableView, Group group, ImageView imageView, VBox vbox, TextArea textArea) {
         this.tableView = tableView;
         this.group = group;
         this.imageView = imageView;
@@ -59,9 +59,9 @@ public class Layout {
     }
 
     void configureTable() {
-        TableColumn<Coordinate, Void> column1 = new TableColumn<>(Constants.getTableColumnIndex());
+        TableColumn<Coordinates, Void> column1 = new TableColumn<>(Constants.getTableColumnIndex());
         column1.setCellFactory(col -> {
-            TableCell<Coordinate, Void> cell = new TableCell<>();
+            TableCell<Coordinates, Void> cell = new TableCell<>();
             cell.textProperty().bind(Bindings.createStringBinding(() -> {
                 if (cell.isEmpty()) {
                     return null;
@@ -72,10 +72,10 @@ public class Layout {
             return cell;
         });
 
-        TableColumn<Coordinate, Integer> column2 = new TableColumn<>(Constants.getTableColumnFirstVariableColumn());
+        TableColumn<Coordinates, Integer> column2 = new TableColumn<>(Constants.getTableColumnFirstVariableColumn());
         column2.setCellValueFactory(new PropertyValueFactory<>(Constants.getCoordinateClassPropertyXName()));
 
-        TableColumn<Coordinate, Integer> column3 = new TableColumn<>(Constants.getTableColumnSecondVariableColumn());
+        TableColumn<Coordinates, Integer> column3 = new TableColumn<>(Constants.getTableColumnSecondVariableColumn());
         column3.setCellValueFactory(new PropertyValueFactory<>(Constants.getCoordinateClassPropertyYName()));
 
         tableView.getColumns().add(column1);

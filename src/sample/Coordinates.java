@@ -1,11 +1,11 @@
 package sample;
 
-public class Coordinate {
+public class Coordinates {
 
     public int xCoordinate;
     public int yCoordinate;
 
-    public Coordinate(int x, int y) {
+    public Coordinates(int x, int y) {
         this.xCoordinate = translateCoordinate(x);
         this.yCoordinate = translateCoordinate(y);
     }
