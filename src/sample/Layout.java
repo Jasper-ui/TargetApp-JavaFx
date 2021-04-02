@@ -89,7 +89,7 @@ public class Layout {
 
         ServerListener serverListener = new ServerListener(tableView, group, textArea);
 
-        EmergencyStop emergencyStop = new EmergencyStop(textArea);
+        EmergencyStopRequest emergencyStop = new EmergencyStopRequest(textArea);
 
         startListeningButton.setOnAction(actionEvent -> {
             offlineTimeLine.stop();

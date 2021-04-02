@@ -6,12 +6,12 @@ import org.restlet.data.Form;
 import org.restlet.resource.ClientResource;
 import org.restlet.resource.ResourceException;
 
-public class EmergencyStop implements Runnable {
+public class EmergencyStopRequest implements Runnable {
 
     private static TextArea textArea;
 
-    public EmergencyStop(TextArea textArea) {
-        EmergencyStop.textArea = textArea;
+    public EmergencyStopRequest(TextArea textArea) {
+        EmergencyStopRequest.textArea = textArea;
     }
 
     @Override
