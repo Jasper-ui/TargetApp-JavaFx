@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="resteasy-jaxrs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/javafx-sdk-11.0.2/lib/resteasy-jaxrs.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
