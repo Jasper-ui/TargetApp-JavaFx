@@ -14,8 +14,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
-import java.io.FileNotFoundException;
-
 public class Layout {
 
     private final TableView<Coordinates> tableView;
